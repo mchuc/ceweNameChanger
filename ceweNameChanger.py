@@ -28,12 +28,12 @@ def file_list(path):
         if os.path.isfile(os.path.join(path, file)):
             if re.match(FILTER0, file, re.MULTILINE | re.IGNORECASE):
                 if re.match(FILTER1, file, re.MULTILINE | re.IGNORECASE):
-                    print("I'm skiping correct fileneme: ", file)
+                    print("I'm skipping correct fileneme: ", file)
                 else:
                     print("Adding file: ", file)
                     output.append(file)
             else:
-                print("I'm skiping file: ", file, " it's not JPEG or PNG")
+                print("I'm skipping file: ", file, " it's not JPEG or PNG")
     return output
 
 

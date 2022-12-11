@@ -95,7 +95,7 @@ def begin():
                 if answer == 1:
                     file_name_1 = datetime.datetime.fromtimestamp(os.path.getctime(file_name)).strftime("%Y-%m-%d-") + f
                     file_name_2 = None
-                    print("My suggested file name:")
+                    print("My suggested file names:")
                     print("1: ", file_name_1)
 
                     '''
@@ -106,7 +106,7 @@ def begin():
                         file_name_2 = file_name_2[0:4]+"-"+file_name_2[4:6]+"-"+file_name_2[6:8]+"-"+f
                         print("2: ", file_name_2)
 
-                    print("3: Your own filename + orginal name ending, ie: XXXX-XX-XX-",f)
+                    print("3: Your own filename ( + I add orginal name ending, ie: XXXX-XX-XX-",f + " )")
 
                     answer = -1
                     while (answer !=1) and (answer!=2) and (answer!=3):
@@ -118,18 +118,18 @@ def begin():
 
                         if answer==1:
                             if rename_file(SEARCH_PATH, f, file_name_1):
-                                print("Job ready. Old file name:", f, " => a new one: ", file_name_1)
+                                print("Job ready. Old file name: ", f, " => a new one: ", file_name_1)
                             else:
                                 print("Change this filename manually: ", f)
 
                         elif answer==2:
                             if file_name_2 is not None:
                                 if rename_file(SEARCH_PATH,f,file_name_2):
-                                    print("Job ready. Old file name:", f, " => a new one: ", file_name_2)
+                                    print("Job ready. Old file name: ", f, " => a new one: ", file_name_2)
                                 else:
                                     print("Change this filename manually: ", f)
                             else:
-                                print("Ups. This option is inactive now")
+                                print("Ups. This option is inactive now.")
                                 answer=-1
                         elif answer==3:
                             print("Input new own name for file ",f)

@@ -8,6 +8,10 @@ Na szczęście większość plików miała prawidłowe znaczniki EXIF :)
 
 Umieść ten plik w folderze, w którym chcesz pozmieniać nazwy i uruchom. Dla bezpieczeństwa, program pozostawia końcówkę nazwy, tak, jak brzmiała ona oryginalnie
 
+```sh
+python ceweNameChanger.py
+```
+
 Pamiętaj, aby zainstalować Pillow!
 
 ```sh
@@ -19,6 +23,8 @@ albo:
 python -m pip install Pillow
 ```
 
+
+
 ## english
 
 The program is what it is, with no guarantee of proper operation.
@@ -27,6 +33,10 @@ Now how to quickly rename them and arrange them chronologically?
 Fortunately, most of the files had the correct EXIF tags :)
 
 Put this file in the folder where you want to rename and run. To be safe, the program leaves the end of the name as it originally sounded
+
+```sh
+python ceweNameChanger.py
+```
 
 Remember to install Pillow!
 

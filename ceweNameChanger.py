@@ -30,7 +30,7 @@ def file_list(path):
                 if re.match(FILTER1, file, re.MULTILINE | re.IGNORECASE):
                     print("I'm skiping correct fileneme: ", file)
                 else:
-                    print("Adding file", file)
+                    print("Adding file: ", file)
                     output.append(file)
             else:
                 print("I'm skiping file: ", file, " it's not JPEG or PNG")
@@ -43,7 +43,7 @@ def rename_file(path, from_, to_):
         file_2 = os.path.join(path, to_)
         os.rename(file_1, file_2)
     except Exception as e:
-        print("**** ERROR by file rename from ", file_1, " => ", file_2)
+        print("**** ERROR when changing filename: ", file_1, " => ", file_2)
         return False
     return True
 
@@ -54,7 +54,7 @@ def begin():
     print("(C) Marcin Chuć 2022")
     print("*****************************************")
 
-    print("Getting files from ", SEARCH_PATH, " ...")
+    print("I'm looking in the directory ", SEARCH_PATH, " ...")
     files = file_list(SEARCH_PATH)
     if len(files)>0:
         print("Working... (not to hard)...")
@@ -72,7 +72,7 @@ def begin():
                 file_date = file_date.replace(":", "-").replace(" ", "-")
                 new_file_name = file_date + "-" + file_ending
                 if rename_file(SEARCH_PATH, f, new_file_name):
-                    print("Work well done. Old file name:", f, " => a new one: ", new_file_name)
+                    print("Job ready. Old file name:", f, " => a new one: ", new_file_name)
                 else:
                     print("Change this filename manually: ", f)
             except Exception as e:
@@ -118,14 +118,14 @@ def begin():
 
                         if answer==1:
                             if rename_file(SEARCH_PATH, f, file_name_1):
-                                print("Work well done. Old file name:", f, " => a new one: ", file_name_1)
+                                print("Job ready. Old file name:", f, " => a new one: ", file_name_1)
                             else:
                                 print("Change this filename manually: ", f)
 
                         elif answer==2:
                             if file_name_2 is not None:
                                 if rename_file(SEARCH_PATH,f,file_name_2):
-                                    print("Work well done. Old file name:", f, " => a new one: ", file_name_2)
+                                    print("Job ready. Old file name:", f, " => a new one: ", file_name_2)
                                 else:
                                     print("Change this filename manually: ", f)
                             else:
@@ -142,7 +142,7 @@ def begin():
                             if len(file_name_3)>0:
                                 file_name_3 = file_name_3+"-"+f
                                 if rename_file(SEARCH_PATH,f,file_name_3):
-                                    print("Work well done. Old file name:", f, " => a new one: ", file_name_3)
+                                    print("Job ready. Old file name:", f, " => a new one: ", file_name_3)
                                 else:
                                     print("Change this filename manually: ", f)
 

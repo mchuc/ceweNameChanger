@@ -1,0 +1,42 @@
+# ceweNameChanger
+
+## język polski
+Program jest, jaki jest, bez gwarancji poprawnego działania.
+Problemem było dla mnie utworzenie albumu rodzinnego, gdyż otrzymałem mnóstwo zdjęć, z różnych aparatów fotograficznych i o różnych nazwach.
+Jak teraz szybko pozmieniać ich nazwy i ułożyć chronologicznie?
+Na szczęście większość plików miała prawidłowe znaczniki EXIF :)
+
+Umieść ten plik w folderze, w którym chcesz pozmieniać nazwy i uruchom. Dla bezpieczeństwa, program pozostawia końcówkę nazwy, tak, jak brzmiała ona oryginalnie
+
+Pamiętaj, aby zainstalować Pillow!
+
+```sh
+pip -m install Pillow
+```
+albo:
+
+```sh
+python -m pip install Pillow
+```
+
+## english
+
+The program is what it is, with no guarantee of proper operation.
+The problem for me was the creation of a family album, as I received a lot of photos, from different cameras and with different names.
+Now how to quickly rename them and arrange them chronologically?
+Fortunately, most of the files had the correct EXIF tags :)
+
+Put this file in the folder where you want to rename and run. To be safe, the program leaves the end of the name as it originally sounded
+
+Remember to install Pillow!
+
+```sh
+pip -m install Pillow
+```
+Or:
+
+```sh
+python -m pip install Pillow
+```
+
+(C) Marcin Chuć 2022
